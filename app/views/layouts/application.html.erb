@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>LeagueTable</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
+    <head>
+        <%= stylesheet_link_tag 'global', :media => 'screen' %>
+        <link href='http://fonts.googleapis.com/css?family=Ubuntu:regular,bold' rel='stylesheet' type='text/css'>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <!--<script type="text/javascript" src="/league/view/js/jquery-1.5.1.min.js"></script>
+        <script type="text/javascript" src="/league/view/js/jquery-ui-1.8.11.custom.min.js"></script>
+        <link rel="stylesheet" href="/league/view/css/ui-lightness/jquery-ui-1.8.11.custom.css" />-->
+        <title>SULSC League tables</title>
+    </head>
+    <body>
+        <header>
+            <div id="inner">
+                <a href="/league/">
+                <img width="150" src="/images/sulsc-small-white.png" style="float: left"/>
+                </a>
+            </div>
+        </header>
+<ul id="breadcrumbs">
+    <li>
+        <a href="/league/">Home</a>
+    </li>
+    <li>
+        <a href='/league/club/' class='selected'>Clubs</a>
+    </li>
+</ul>
+<article>
+    <section>
+        <%= yield %>
+    </section>
+    <section>
+        <h3>Sidebar</h3>
+    </section>
 
-<%= yield %>
-
-</body>
+</article> 
+        <footer>
+            <div>
+                <p>
+                    This league table is based on data from the
+                    <a href="http://www.bulsca.co.uk/league.html">official BULSCA league tables</a>.
+                    To report problems with this system, please drop me an email at webmaster{AT}sulsc.org
+                </p>
+            </div>
+        </footer>
+    </body>
 </html>

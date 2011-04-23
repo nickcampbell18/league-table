@@ -1,0 +1,4 @@
+<h1>List of clubs</h1>
+<% @clubs.each do |club| %>
+<h3><%= link_to club.name, club %></h3>
+<% end %>

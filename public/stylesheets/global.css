@@ -1,0 +1,125 @@
+html, body {
+    height: 100%;
+}
+body {
+    font-family: Ubuntu;
+    font-size: 90%;
+    width: 95%;
+    margin: 0 auto;
+    color: #f4f4f4;
+    background: -moz-linear-gradient(top, #2D2E33 0%, #000000 100%); /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2D2E33), color-stop(100%,#000000)); /* webkit */
+
+}
+a {
+    text-decoration: none;
+    color: #de530d;
+}
+a:hover {
+    border-bottom: 2px solid #de530d;
+}
+a img {
+    border: 0;
+}
+h1, h2, h3, h4 {
+    margin: 3px;
+    padding: 0;
+}
+h1 {
+    font-size: 1.6em;
+}
+h2 {
+    font-size: 1.2em;
+}
+h3 {
+    font-size: 0.9em;
+}
+h4 {
+    font-size: 0.7em;
+}
+
+
+article, section, header, footer {
+    display: block;
+}
+
+article, footer, div#inner {
+    width: 100%;
+    margin: 0;
+}
+div#inner {
+    padding: 3px;
+}
+header, article, footer {
+    display: -moz-box;
+    display: -webkit-box;
+}
+header {
+    -moz-box-align: center;
+    -webkit-box-align: center;
+    -moz-box-pack: center;
+    -webkit-box-pack: center;
+    min-height: 70px;
+    /* webkit */
+}
+section {
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    padding: 10px;
+    margin: 15px 0;
+}
+section:first-of-type, section#selected {
+    /*border: 1px solid #c9c9c9;*/
+    background-color: rgba(100%,100%,100%, 0.05);
+    margin-right: 15px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-box-flex: 4;
+    -webkit-box-flex: 4;
+
+}
+footer p {
+    font-family: Arial, verdana, sans;
+    margin: 0 5px;
+    color: #717171;
+    font-size: 80%;
+}
+
+ul#breadcrumbs {
+    padding: 0;
+    width: 100%;
+    margin: 15px auto 0 auto;
+    font-size: 80%;
+    font-weight: bold;
+}
+ul#breadcrumbs li {
+    display: inline;
+    padding-right: 20px;
+}
+a.selected {color: white;}
+
+.results {
+    color: green;
+}
+.results:hover {
+    border-bottom: 2px solid green;
+}
+table#league {
+    width: 100%;
+}
+table#league tr td:last-of-type {
+    #border-left: 1px solid #3c3c3c;
+    background-color: rgba(100%,100%,100%,0.05);
+}
+
+table#single_comp td {
+    padding: 4px;
+}
+
+table td {
+    border-bottom: 1px solid #3c3c3c;
+    text-align: center;
+}
+table tr:last-of-type td {
+    border-bottom: none;
+}
