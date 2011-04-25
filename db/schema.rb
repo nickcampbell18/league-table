@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110423172538) do
+ActiveRecord::Schema.define(:version => 20110423211451) do
 
   create_table "clubs", :force => true do |t|
     t.string   "name",       :limit => 30
@@ -20,7 +20,8 @@ ActiveRecord::Schema.define(:version => 20110423172538) do
   end
 
   create_table "teams", :force => true do |t|
-    t.string   "name"
+    t.string   "name",       :limit => 1
+    t.integer  "club_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

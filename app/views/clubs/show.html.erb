@@ -1,5 +1,13 @@
 <%= notice %>
 <h1> <%= @club.name %></h1>
-
 <h3><%= link_to 'Edit', edit_club_path(@club) %></h3>
-<h3><%= link_to 'Back', clubs_path %></h3>
+<h2>Has teams:</h2>
+<ul>
+<% @club.teams.each do |team| %>
+
+<li>
+    <%= link_to team.name, [@club, team] %>
+</li>
+<% end %>
+<%= link_to 'Add new team', new_club_team_path(@club) %>
+</ul>

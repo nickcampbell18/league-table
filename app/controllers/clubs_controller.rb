@@ -1,8 +1,10 @@
 class ClubsController < ApplicationController
+  before_filter :authenticate, :except => [:index, :show]
+  
   # GET /clubs
   # GET /clubs.xml
   def index
-    @clubs = Club.find(:all, :order => 'name')
+    @clubs = Club.all
 
     respond_to do |format|
       format.html # index.html.erb
