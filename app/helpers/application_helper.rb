@@ -4,7 +4,9 @@ module ApplicationHelper
     case params[:controller]
     when "teams"
       html << clubsnav
+      if params[:action] == "show"
         html << content_tag(:li, link_to("Team "+@team.name, url_for([@club, @team])))
+      end
     when "clubs"
       html << clubsnav
     end
