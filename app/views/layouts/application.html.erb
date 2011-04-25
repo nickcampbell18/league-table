@@ -17,9 +17,20 @@
                 </a>
             </div>
         </header>
-
-        <%= yield %>
-
+        <ul id="breadcrumbs">
+            <li>
+                <a href='/'>Home</a>
+            </li>
+            <%= navigation %>
+        </ul>
+        <article>
+            <section>
+                <%= yield %>
+            </section>
+            <section>
+                <%= render 'layouts/sidebar' %>
+            </section>
+        </article>
         <footer>
             <div>
                 <p>
